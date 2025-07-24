@@ -33,8 +33,8 @@ public class WardrobeRunner {
 
         FileService.save(wardrobe.getPair(), "ubrania.obj");
         Pair read = FileService.read("ubrania.obj");
-        wardrobe.setPair(read);
-        for (Clothes clothes : wardrobe) {
+        Wardrobe w1 = new Wardrobe(read);
+        for (Clothes clothes : w1) {
             System.out.println(clothes);
         }
     }
